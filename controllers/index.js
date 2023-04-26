@@ -3,5 +3,6 @@ module.exports = {
     User: require("./User"),
     Message: require("./Message"),
     Admin: require("./Admin"),
+    Service: require("./Service"),
 
 }

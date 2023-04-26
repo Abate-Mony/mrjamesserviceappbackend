@@ -3,4 +3,5 @@ module.exports = {
     User: require("./AnonymousUser"),
     Message: require("./Message"),
     Admin: require("./Admin"),
+    Service: require("./Service"),
 }

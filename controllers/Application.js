@@ -10,11 +10,13 @@ const create = async(req, res) => {
     })
 }
 const get = async(req, res) => {
-    const { id } = req.params
-    var applications = await Application.find({})
+    const query = req.query
+    var applications = null;
+    applications = await Application.find({...query })
 
     res.status(200).json({
-        applications
+        applications,
+        nHits: applications.length
     })
 }
 module.exports = {

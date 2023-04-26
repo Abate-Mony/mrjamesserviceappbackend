@@ -9,12 +9,13 @@ app.use(express.json());
 const { NOTFOUND, ERROR, AdminAuth } = require("./middlewares")
 const { Admin } = require("./models")
 
-const { Application, User, Message, Admin: admin } = require("./routes")
+const { Application, User, Message, Admin: admin, Service } = require("./routes")
 const Auth = require("./middlewares/Auth")
 app.use("/application", Application)
 app.use("/auth", User)
 app.use("/message", Auth, Message)
 app.use("/admin", admin);
+app.use("/service", AdminAuth, Service)
 app.use(ERROR)
 app.use(NOTFOUND)
 
