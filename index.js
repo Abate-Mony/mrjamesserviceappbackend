@@ -14,7 +14,7 @@ const { Application, User, Message, Admin: admin, Service } = require("./routes"
 const Auth = require("./middlewares/Auth")
 app.get("/", (req, res) => {
 
-    res.send("hello world")
+    res.send("hello world user")
 
 })
 app.use("/application", Application)
