@@ -7,21 +7,20 @@ const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors())
-const { NOTFOUND, ERROR, AdminAuth } = require("./middlewares")
+const { NOTFOUND, ERROR, /*AdminAuth*/ } = require("./middlewares")
 const { Admin } = require("./models")
 
-const { Application, User, Message, Admin: admin, Service } = require("./routes")
-const Auth = require("./middlewares/Auth")
+// const { Application, User, Message, Admin: admin, Service } = require("./routes")
+// const Auth = require("./middlewares/Auth")
 app.get("/", (req, res) => {
+        res.send("hello world user")
 
-    res.send("hello world user")
-
-})
-app.use("/application", Application)
-app.use("/auth", User)
-app.use("/message", Auth, Message)
-app.use("/admin", admin);
-app.use("/service", AdminAuth, Service)
+    })
+    // app.use("/application", Application)
+    // app.use("/auth", User)
+    // app.use("/message", Auth, Message)
+    // app.use("/admin", admin);
+    // app.use("/service", AdminAuth, Service)
 app.use(ERROR)
 app.use(NOTFOUND)
 
