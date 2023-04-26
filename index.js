@@ -10,8 +10,8 @@ app.use(cors())
     // const { NOTFOUND, ERROR, /*AdminAuth*/ } = require("./middlewares")
     // const { Admin } = require("./models")
 
-// const { Application, User, Message, Admin: admin, Service } = require("./routes")
-// const Auth = require("./middlewares/Auth")
+const { Application, User, Message, Admin: admin, Service } = require("./routes")
+    // const Auth = require("./middlewares/Auth")
 app.get("/", (req, res) => {
         res.send("hello world user")
 
@@ -28,14 +28,14 @@ app.get("/", (req, res) => {
 const start = async() => {
     try {
         app.listen(port, function() {
-            console.log(`app is running on port ${port }`)
-        })
-        require("./db/connections");
-        // await Admin.deleteMany({});
-        // await Admin.create({
-        //     phone: 672301714,
-        //     password: "mrjames"
-        // })
+                console.log(`app is running on port ${port }`)
+            })
+            // require("./db/connections");
+            // await Admin.deleteMany({});
+            // await Admin.create({
+            //     phone: 672301714,
+            //     password: "mrjames"
+            // })
 
     } catch (err) {
         console.log(err)

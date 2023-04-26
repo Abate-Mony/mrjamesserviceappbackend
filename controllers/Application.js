@@ -1,5 +1,3 @@
-const { BadRequestError } = require("../error")
-
 const { Application } = require("../models");
 
 
