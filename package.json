@@ -3,15 +3,20 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "engines": {
+        "node": "14.x"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "startDev": "nodemon index.js"
+        "startDev": "nodemon index.js",
+        "start": "node index.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
         "dotenv": "^16.0.3",
         "express": "^4.18.2",
         "express-async-errors": "^3.1.1",
