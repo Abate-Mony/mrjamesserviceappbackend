@@ -17,7 +17,7 @@ const { NOTFOUND, ERROR, AdminAuth } = require("./middlewares")
 // const Auth = require("./middlewares/Auth")
 app.get("/", (req, res) => {
         res.send("hello world user");
-
+        console.log("this is the main router")
 
     })
     // app.use("/application", Application)
