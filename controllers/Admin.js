@@ -1,16 +1,13 @@
-const { Admin } = require("../models");
-const { BadRequestError } = require("../error")
+const Admin = require("../models/Admin");
+const BadRequestError = require("../error/BadRequestError")
 
 module.exports = {
-
     login: async(req, res) => {
-
         const isUser = await Admin.findOne({
             phone: req.body.phone
         })
         if (!isUser) {
             throw BadRequestError("invalid phone number")
-
         }
         const decodedPassword = await isUser.comparePassword(req.body.password);
         if (!decodedPassword) {
