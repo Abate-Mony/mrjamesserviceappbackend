@@ -1,4 +1,4 @@
-const { BadRequestError } = require("../error")
+const BadRequestError = require("../error/BadRequestError")
 const jwt = require("jsonwebtoken")
 module.exports = async(req, res, next) => {
     const header = req.headers.authorization;
