@@ -1,13 +1,12 @@
 const Application = require("../models/Appication");
 
-
-const create = async(req, res) => {
+const createApplication = async(req, res) => {
     await Application.create({...req.body });
     res.status(200).json({
         status: "ok"
     })
 }
-const get = async(req, res) => {
+const getApplication = async(req, res) => {
     const query = req.query
     var applications = null;
     applications = await Application.find({...query })
@@ -18,6 +17,6 @@ const get = async(req, res) => {
     })
 }
 module.exports = {
-    create,
-    get
+    createApplication,
+    getApplication
 }

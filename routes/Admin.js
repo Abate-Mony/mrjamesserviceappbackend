@@ -1,8 +1,6 @@
 const {
-    Admin: {
-        login
-    }
-} = require("../controllers");
+    login
+} = require("../controllers/Admin");
 
 const express = require("express")
 const router = express.Router()

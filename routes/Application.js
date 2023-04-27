@@ -1,12 +1,12 @@
 const AdminAuth = require("../middlewares/AdminAuth")
 
 const {
-    create,
-    get
+    createApplication,
+    getApplication
 } = require("../controllers/Application");
 
 const express = require("express")
 const router = express.Router()
-router.route("/").post(create).get(AdminAuth, get)
+router.route("/").post(createApplication).get(AdminAuth, getApplication)
 
 module.exports = router
