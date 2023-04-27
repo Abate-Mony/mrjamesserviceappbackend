@@ -1,7 +1,7 @@
-const { Schema, model } = require("mongoose")
+const mongoose = require("mongoose")
 
 
-const UserSchema = new Schema({
+const UserSchema = new mongoose.Schema({
         service_type: {
             type: String,
             required: [true, "please provide a service type"],
@@ -61,5 +61,5 @@ const UserSchema = new Schema({
     }
 
 )
-const userschema = model("Application", UserSchema)
+const userschema = mongoose.model("Application", UserSchema)
 module.exports = userschema
