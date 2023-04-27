@@ -24,7 +24,6 @@ app.get("/", (req, res) => {
 app.use(ERROR)
 app.use(NOTFOUND)
 
-
 const start = async() => {
     try {
         app.listen(port, function() {
@@ -42,3 +41,4 @@ const start = async() => {
     }
 }
 start()
+module.exports = app
