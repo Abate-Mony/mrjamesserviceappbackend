@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors())
 const { NOTFOUND, ERROR } = require("./middlewares")
-    // const Admin = require("./models/Admin")
+const Admin = require("./models/Admin")
 
 // const { Application, User, Message, Admin: admin, Service } = require("./routes")
 const Application = require("./routes/Application")
