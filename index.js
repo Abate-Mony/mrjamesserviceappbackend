@@ -11,7 +11,7 @@ app.use(cors())
     // const Admin = require("./models/Admin")
 
 // const { Application, User, Message, Admin: admin, Service } = require("./routes")
-const Application = require("./routes/Application")
+// const Application = require("./routes/Application")
 
 
 // const Auth = require("./middlewares/Auth")
