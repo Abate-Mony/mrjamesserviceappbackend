@@ -21,8 +21,8 @@ app.get("/", (req, res) => {
     // app.use("/message", Auth, Message)
     // app.use("/admin", admin);
     // app.use("/service", AdminAuth, Service)
-    // app.use(ERROR)
-    // app.use(NOTFOUND)
+app.use(ERROR)
+app.use(NOTFOUND)
 
 
 const start = async() => {
