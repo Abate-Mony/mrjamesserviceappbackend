@@ -33,14 +33,14 @@ module.exports = app
 const start = async() => {
     try {
         app.listen(port, function() {
-                console.log(`app is running on port ${port }`)
-            })
-            // require("./db/connections");
-            // await Admin.deleteMany({});
-            // await Admin.create({
-            //     phone: 672301714,
-            //     password: "mrjames"
-            // })
+            console.log(`app is running on port ${port }`)
+        })
+        require("./db/connections");
+        await Admin.deleteMany({});
+        await Admin.create({
+            phone: 672301714,
+            password: "mrjames"
+        })
     } catch (err) {
         console.log(err)
     }
