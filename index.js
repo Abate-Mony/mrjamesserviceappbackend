@@ -16,7 +16,8 @@ app.use(cors())
 
 // const Auth = require("./middlewares/Auth")
 app.get("/", (req, res) => {
-        res.send("hello world user")
+        res.send("hello world user");
+
 
     })
     // app.use("/application", Application)
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
     // app.use("/service", AdminAuth, Service)
     // app.use(ERROR)
     // app.use(NOTFOUND)
+module.exports = app
 
 const start = async() => {
     try {
@@ -44,4 +46,3 @@ const start = async() => {
     }
 }
 start()
-module.exports = app
