@@ -2,14 +2,15 @@
 const User = require("../models/AnonymousUser");
 
 const createUser = async(req, res) => {
-    await User.create({})
+    const user = await User.create({})
+    const token = await user.createJWT()
     res.status(200).json({
-        status: "ok"
+        user: user._id,
+        token
     })
 
 }
 const updateUser = async(req, res) => {
-
     res.send("update a user")
 
 }

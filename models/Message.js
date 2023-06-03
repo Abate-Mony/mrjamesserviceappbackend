@@ -2,7 +2,7 @@ const { Schema, model, } = require("mongoose")
 const messageSchema = new Schema({
     message: {
         type: String,
-        required: true,
+        required: [true, "please provide a message"],
     },
     createdBy: {
         type: Schema.ObjectId,
@@ -11,7 +11,7 @@ const messageSchema = new Schema({
     },
     sentTo: {
         type: Schema.ObjectId,
-        required: true,
+        required: false,
         ref: "user"
 
     }
